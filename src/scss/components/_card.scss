@@ -1,0 +1,31 @@
+.card__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 6%;
+    width: 100%;
+    .card__container {
+        background-color: $white;
+        border: 2px solid $black;
+        border-radius: 0.75rem;
+        color: $black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem;
+        text-align: start;
+        width: 20%;
+        .card__data {
+            padding: 1rem;
+        }
+        img {
+            width: 100%;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+        h2 {
+            padding-top: 0;
+        }
+    }
+}
+  
+  

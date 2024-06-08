@@ -1,0 +1,121 @@
+@import '../abstracts/variables';
+
+.navbar__container {
+    background-color: $secondary-color;
+    height: $navbar-height;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease; // Transición de fondo
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra suave
+
+    .navbar__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0 10%;
+
+        @media (max-width: 1600px) {
+            padding: 0 5%;
+        }
+
+        @media (max-width: 1200px) {
+            padding: 0 3%;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 0 2%;
+        }
+
+        @media (max-width: 300px) {
+            padding: 0 1%;
+        }
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            width: 100%;
+            display: none; // Ocultar el menú en móvil por defecto
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+
+        @media (max-width: 768px) {
+            display: block;
+            cursor: pointer;
+            font-size: $font-size-lg;
+            color: $typography-color;
+        }
+    }
+
+    .menu-open nav {
+        display: flex; // Mostrar el menú cuando está abierto
+    }
+
+    a {
+        font-size: $font-size-md;
+        text-decoration: none;
+        color: $typography-color;
+        padding: 0.5rem 1rem;
+        position: relative;
+        transition: color 0.3s ease, transform 0.3s ease; // Transición de color y transformación
+        border-radius: 10px; // Bordes redondeados
+
+        &:hover {
+            color: $typography-link-hover;
+            transform: translateY(-2px); // Efecto de levantamiento al hover
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Sombra al hover
+        }
+
+        @media (max-width: 768px) {
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        @media (max-width: 300px) {
+            font-size: $font-size-sm;
+            padding: 8px 0;
+        }
+
+        @media (max-width: 200px) {
+            font-size: $font-size-xs;
+            padding: 5px 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar__wrapper {
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media (max-width: 300px) {
+        .navbar__wrapper {
+            padding: 0 1%;
+        }
+    }
+
+    @media (max-width: 200px) {
+        .navbar__wrapper {
+            padding: 0;
+        }
+
+        nav a {
+            font-size: $font-size-xs;
+            padding: 5px 0;
+        }
+    }
+}
+

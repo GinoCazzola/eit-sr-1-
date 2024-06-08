@@ -1,0 +1,16 @@
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: $background-color;
+    padding-top: $navbar-height;
+    padding-bottom: $footer-height;
+}
+
+a {
+    text-decoration: none;
+    color: $typography-color;
+}

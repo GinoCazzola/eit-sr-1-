@@ -1,0 +1,149 @@
+
+
+@import "./abstracts/_variables.scss";
+
+@import "./base/base";
+
+@import "./components/card";
+@import "./components/cart";
+@import "./components/cart-item";
+@import "./components/counter";
+@import "./components/form";
+@import "./components/input-group";
+@import "./components/modal";
+@import "./components/socialmedia";
+
+@import "./layout/footer";
+@import "./layout/navbar";
+@import "./layout/form-layout";
+@import "./layout/about";
+@import "./layout/banner";
+@import "../index.css";
+
+
+/* Media queries para pantallas pequeñas */
+@media only screen and (min-width: 200px) and (max-width: 599px) {
+    .card__wrapper {
+        .card__container {
+            width: calc(100% - 20px); // Tarjetas de ancho completo en dispositivos móviles
+            margin: 10px; // Espaciado reducido entre tarjetas
+        }
+
+        .card__data {
+            h2 {
+                font-size: 1.25rem; // Tamaño de fuente más pequeño para títulos
+            }
+
+            p {
+                font-size: 0.875rem; // Tamaño de fuente más pequeño para texto
+            }
+        }
+    }
+
+    .cart-item__container {
+        margin: 0 1rem; // Espaciado reducido entre elementos del carrito
+    }
+
+    .cart__navbar-button {
+        font-size: 1rem; // Tamaño de fuente reducido para el botón de carrito
+    }
+
+    .counter__count-text {
+        font-size: 1rem; // Tamaño de fuente reducido para el contador
+    }
+
+    .form__button-submit {
+        font-size: 0.875rem; // Tamaño de fuente más pequeño para botón de formulario
+    }
+
+    .input-group__input {
+        font-size: 0.875rem; // Tamaño de fuente más pequeño para inputs
+    }
+
+    .modal__container {
+        height: 25rem; // Altura reducida para el modal en dispositivos móviles
+    }
+
+    .socialmedia__wrapper {
+        img {
+            height: 1rem; // Tamaño reducido para íconos de redes sociales
+            width: 1rem;
+        }
+    }
+}
+
+/* Media queries para pantallas medianas */
+@media only screen and (min-width: 600px) and (max-width: 959px) {
+    .card__wrapper {
+        .card__container {
+            width: calc(50% - 40px); // Dos tarjetas por fila en pantallas medianas
+            margin: 20px; // Espaciado normal entre tarjetas
+        }
+    }
+
+    .cart-item__container {
+        margin: 0 2rem; // Espaciado normal entre elementos del carrito
+    }
+
+    .counter__count-text {
+        font-size: 1.25rem; // Tamaño de fuente ligeramente más grande para el contador
+    }
+
+    .form__button-submit {
+        font-size: 1rem; // Tamaño de fuente normal para botón de formulario
+    }
+
+    .input-group__input {
+        font-size: 1rem; // Tamaño de fuente normal para inputs
+    }
+
+    .modal__container {
+        height: 30rem; // Altura normal para el modal en pantallas medianas
+    }
+
+    .socialmedia__wrapper {
+        img {
+            height: 1.25rem; // Tamaño ligeramente más grande para íconos de redes sociales
+            width: 1.25rem;
+        }
+    }
+}
+
+/* Media queries para pantallas grandes */
+@media only screen and (min-width: 960px) and (max-width: 1809px) {
+    .card__wrapper {
+        .card__container {
+            width: calc(33.33% - 40px); // Tres tarjetas por fila en pantallas grandes
+        }
+    }
+
+    .counter__container {
+        margin: 2rem; // Espaciado normal para el contador en pantallas grandes
+    }
+
+    .modal__container {
+        height: 35rem; // Altura ligeramente más grande para el modal en pantallas grandes
+    }
+
+    .socialmedia__wrapper {
+        img {
+            height: 1.5rem; // Tamaño más grande para íconos de redes sociales
+            width: 1.5rem;
+        }
+    }
+}
+
+/* Estilos generales que se aplican a todas las pantallas */
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $background-color;
+    padding-top: $navbar-height;
+    padding-bottom: $footer-height;
+}
+
+a {
+    text-decoration: none;
+    color: $typography-color;
+}
+
